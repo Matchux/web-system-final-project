@@ -1,0 +1,399 @@
+/* Kyla Fiona Frances L. Lopez */
+/* Matthew Raganot*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    width: 1440;
+    height: auto;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center {
+    text-align: center;
+}
+
+/* NAVIGATION */
+nav {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px 0;
+    position: fixed;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #aaa;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all .5s;
+}
+nav ul li a:hover {
+    color: #555;
+}
+
+nav.shift ul li a {
+    position:relative;
+    z-index: 1;
+}
+nav.shift ul li a:hover {
+    color: #00000080;
+}
+nav.shift ul li a:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    background: #F1C40F;
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+}
+nav.shift ul li a:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
+
+/* END NAVIGATION */
+
+/* WHITE SPACE */
+.header-wrapper{
+    height: 93px;
+    color: #fff;
+}
+/* WHITE SPACE */
+
+
+/* LANDING PAGE */
+.landing-page {
+    height: 800px;
+    width: 100%;
+    background-image: url("img/landing-page-image.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+   
+}
+
+.text-container {
+    display: grid;
+    margin: 8em;
+    gap: 2em;
+    position: absolute;
+   
+}
+
+.h1-large {
+    font-size: 3.6em;
+    color: #4285f4;
+}
+
+.h1-large-highlight {
+    color: #F1C40F;
+}
+
+.sub-head {
+    line-height: 1.8em;
+    color: #00000080;
+}
+
+/* BUTTON */
+
+.button-lg {
+	display: inline-block;
+	padding: 1.75rem 3.50rem;
+	border: 2px solid #00000080;
+	background-color: transparent;
+	font-weight: 400;
+    margin-top: 5em;
+    margin-right: 50em;
+	font-size: 1rem;
+	line-height: 0;
+	letter-spacing: 0.25rem;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.button-lg:hover {
+	background-color: #F1C40F;
+    border-color: transparent;
+    text-transform: uppercase;
+    transition: all 0.10s;
+}
+
+.btn-outline-lg {
+    color: #00000080;
+}
+
+.btn-outline-lg:hover {
+    color: #00000080;
+    text-transform: uppercase;
+    transition: all 0.10s;
+}
+
+/* END BUTTON */
+
+/* SERVICES */
+.container-services {
+    margin: 10em 0;
+}
+
+.title-services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #F1C40F;
+}
+.services {
+    display: flex;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(4, auto);
+    margin: 1.5em;
+    gap: 2em;
+}
+
+.services p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* ABOUT*/
+
+.description-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em 0;
+    gap: 2em;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10em;
+    margin: 15em 0;
+}
+
+.container-about {
+    margin-bottom: 15em;
+}
+
+.title-about {
+    font-size: 2rem;
+    color: #F1C40F;
+}
+
+.sub-about {
+    font-size: 1.5rem;
+    margin: 1em 0;
+}
+
+.about-p {
+    line-height: 1.5em;
+}
+
+.container-about {
+    height: 400px;
+}
+
+.title-about {
+    margin: 5em 0 1em 0 ;
+}
+
+.card {
+    width: 340px
+}
+
+/* testimonials */
+
+.title-testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #F1C40F;
+    margin: 0 0 1em 0;
+}
+
+.testimonial {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 10em 0;
+
+}
+
+.testimonial blockquote {
+    margin: 10px 10px 0;
+    background: #efefef;
+    padding: 20px 60px;
+    position: relative;
+    width: 500px;
+    border: #F1C40F;
+    border-radius: 8px;
+    font-style: italic;
+}
+
+.testimonial blockquote:before,
+.testimonial blockquote:after {
+    content: "\201C";
+    position: relative;
+    font-size: 80px;
+    line-height: 1;
+    color: #F1C40F;
+    font-style: normal;
+}
+
+.testimonial blockquote:before {
+    top: 0;
+    left: 10px;
+}
+
+.testimonial blockquote:after {
+    content: "\201D";
+    right: -1px;
+    bottom: -0.5em;
+}
+
+
+.testimonial-p {
+    margin: 8px 0 0 20px;
+    text-align: left;
+    color: #000;
+    line-height: 1.5rem;
+}
+
+
+/* form */
+form {
+    width: 820px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.form-group {
+	position: relative;
+	margin-bottom: 1.375rem;
+}
+
+.form-control-input,
+.form-control-textarea {
+	width: 100%;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	padding-left: 1.5rem;
+	border: 2px solid #e6e7ec;
+	background-color: #ffffff;
+	color: #667077;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	font-family: "Poppins";
+}
+
+::placeholder {
+	color: #667077;
+	opacity: 1;
+}
+
+.form-control-textarea {
+	display: block;
+	height: 14rem;
+}
+
+.form-control-input:focus,
+.form-control-textarea:focus {
+	border: 2px solid #d7d8e1;
+	outline: none;
+}
+
+.form-control-input:hover,
+.form-control-textarea:hover {
+	border: 2px solid #d7d8e1;
+}
+
+.form-control-submit-button {
+	display: inline-block;
+	width: 100%;
+	height: 3.75rem;
+	border: 2px solid #fff;
+	background-color: #fff;
+	color: #121212;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 0;
+	font-family: "Poppins";
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.form-control-submit-button:hover {
+	border: 2px solid #F1C40F;
+	background-color: #F1C40F;
+	color: #fff;
+}
+
+.contact {
+	padding-top: 9rem;
+	padding-bottom: 9rem;
+	text-align: center;
+}
+
+.contact h2 {
+	margin-bottom: 0.875rem;
+        font-size: 2rem;
+    color: #F1C40F;
+}
+
+.contact p {
+	margin-bottom: 3.75rem;
+}
+
+.contact form {
+	text-align: left;
+}
+
+
+
+
